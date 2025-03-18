@@ -85,10 +85,13 @@ function App(): React.JSX.Element {
           />
         </View>
 
-        {resultValue && (
-          <Text style={styles.resultTxt}>{resultValue}</Text>
-        )}
-   </View>
+        
+
+  {resultValue ? (
+    <Text style={styles.resultTxt}>{resultValue}</Text>
+  ) : null}
+
+</View>
         <View style={styles.bottomContainer}>
           <FlatList
              numColumns={3}
@@ -133,6 +136,7 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     flex: 3,
+    
   },
   button: {
     flex: 1,
